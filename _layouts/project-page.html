@@ -1,0 +1,20 @@
+---
+layout: page
+---
+
+<div class="col-12 centered p-3 my-4 card bg-light" id="{{ page.projectid }}">
+    <div class="row p-3">
+        <div class="col-md-6">
+            <a href="{{page.link}}"><img class="img-fluid" src="{{ page.image }}" alt="{{page.title}} image" style="max-height:400px;">
+            </a>
+        </div>
+        <div class="col-md-6">
+            <h4>  <a href="{{page.link}}"><b>{{page.title}}</b> </a></h4>
+           
+            <h5>{{page.description}}<br /></h5>
+
+            {%if page.link%}<a class="btn btn-lg btn-primary m-4" href="{{page.link}}">Visit Project Site</a>{%endif%}
+
+        </div>
+    </div>
+</div>

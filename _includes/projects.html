@@ -1,0 +1,17 @@
+{% for project in site.data.projects %}
+
+<div class="col-4 centered p-3 my-4 card " id="{{ project.projectid }}">
+    <div class="row p-3">
+                <h4>  <a href="{{project.link}}"><b>{{project.title}}</b> </a></h4>
+            <a href="{{project.link}}"><img class="img-fluid" src="{{ project.image }}" alt="{{project.title}} image" style="max-height:400px;">
+            </a>
+            <h5>{{project.description | truncatewords: 15}}<br /></h5>
+
+            {%if project.link%}<a class="btn btn-lg btn-primary m-4" href="/projects/{{project.projectid}}.html">More on the project</a>
+            <a class="btn btn-lg btn-success m-4" href="{{project.link}}">Visit Project Site</a>{%endif%}
+
+    
+    </div>
+</div>
+
+{%endfor%}
